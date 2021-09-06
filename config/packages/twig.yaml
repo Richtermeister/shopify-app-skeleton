@@ -1,0 +1,8 @@
+twig:
+    default_path: '%kernel.project_dir%/templates'
+    globals:
+        shopify_api_key: "%codecloud_shopify.oauth.api_key%"
+
+when@test:
+    twig:
+        strict_variables: true

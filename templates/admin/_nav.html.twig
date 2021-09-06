@@ -1,0 +1,17 @@
+{% set current_path = app.request.get('_route') %}
+
+<nav class="navbar navbar-expand-sm navbar-light">
+    <div class="d-flex justify-content-between w-100">
+        <div>
+            <ul class="navbar-nav">
+                <li class="nav-item{% if current_path == 'admin_dashboard' %} active{% endif %}">
+                    <a class="nav-link" href="{{ path('admin_dashboard') }}">Dash <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item{% if current_path == 'admin_settings' %} active{% endif %}">
+                    <a class="nav-link" href="{{ path('admin_settings') }}">Settings <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+        <div class="navbar-text text-right">{{ app.user.username }}</div>
+    </div>
+</nav>

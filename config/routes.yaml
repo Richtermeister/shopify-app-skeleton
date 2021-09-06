@@ -1,0 +1,2 @@
+shopify:
+  resource: '@CodeCloudShopifyBundle/Resources/config/routing.yml'
